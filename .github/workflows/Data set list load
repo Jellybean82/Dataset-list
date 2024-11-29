@@ -1,5 +1,12 @@
+
+os: linux
 name: Dataset-load-AZ-legiscan
 
 on: [push]
 
+cd /opt
+wget https://api.legiscan.com/dl/legiscan-current.tar.gz
+tar zxvf legiscan-current.tar.gz
+cd legiscan
 
+php upgrade.php
