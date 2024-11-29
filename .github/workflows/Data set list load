@@ -10,3 +10,10 @@ tar zxvf legiscan-current.tar.gz
 cd legiscan
 
 php upgrade.php
+
+mysql -u root -p
+CREATE DATABASE legiscan_api DEFAULT CHARACTER SET utf8;
+GRANT USAGE ON *.* TO 'legiscan_api'@'localhost' IDENTIFIED BY '<your password>';
+GRANT CREATE, ALTER, SELECT, INSERT, UPDATE, DELETE ON `legiscan_api`.* TO 'legiscan_api'@'localhost';
+FLUSH PRIVILEGES;
+exit
