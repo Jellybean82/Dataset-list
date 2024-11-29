@@ -23,3 +23,5 @@ mysql -D legiscan_api -u root -p < schema-mysql.sql
 sudo -u postgres createuser -S -D -R -P legiscan_api
 Enter password for new role: dihnah-ziNza8-wetkyn
 Enter it again: dihnah-ziNza8-wetkyn
+
+sudo -u postgres createdb -E UTF8 -O legiscan_api legiscan_api
